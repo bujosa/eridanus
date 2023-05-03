@@ -1,2 +1,3 @@
 # eridanus
-This is a simple project in rust, about Basic Authentication
+
+This is a simple project in rust, about using actix-web
