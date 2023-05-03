@@ -29,7 +29,7 @@ async fn add(path: Path<(i64, i64)>) -> impl Responder {
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    HttpServer::new(|| App::new().service(index).service(hello))
+    HttpServer::new(|| App::new().service(index).service(hello).service(add))
         .bind("localhost:8080")?
         .run()
         .await
