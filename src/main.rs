@@ -24,7 +24,7 @@ async fn add(path: Path<(i64, i64)>) -> impl Responder {
 
     let result: i64 = engine.eval_file::<i64>("src/add.rhai".into()).unwrap();
 
-    format!("{result}")
+    format!("{} + {} = {}", num1, num2, result)
 }
 
 #[actix_web::main]
